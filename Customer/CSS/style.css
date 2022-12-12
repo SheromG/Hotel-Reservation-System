@@ -27,7 +27,7 @@ body
 }
 .container nav
 {
-    padding-top: 15px;
+    padding-top: 25px;
 }
 .container nav .top
 {
@@ -85,7 +85,7 @@ body
 .container2 form div input
 {
     width: 100%;
-    height: 50px;
+    height: 55px;
     border: 0px;
     font-size: large;
 }
@@ -109,5 +109,25 @@ body
 {
     color: white;
     background-color: black;
-
+}
+.container2 form #forgot
+{
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+}
+.container2 form #forgot a 
+{
+    color: dimgray;
+    text-decoration: none;
+}
+.container2 form #forgot a:hover
+{
+    color: blue;
+}
+.copy
+{
+    margin-top: 50px;
+    color: lightslategray;
+    text-align: center;
 }
