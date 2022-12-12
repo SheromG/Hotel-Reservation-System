@@ -12,3 +12,48 @@ body
     background-attachment: fixed;
     background-repeat: no-repeat; 
 }
+.container
+{
+    width: 70%;
+    height: 40em;
+    background-color: white;
+    border-radius: 10px;
+    top: 10%;
+    left: 15%;
+    position: fixed;
+}
+.container nav ul
+{
+    display: flex;
+    justify-content: center;
+}
+.container nav ul li
+{
+    list-style: none;
+    margin-top: 15px;
+    padding: 15px;
+    font-family: "Lucida Console";
+    border: 2px solid black;
+}
+.container nav ul .left
+{
+    border-radius: 30px 0px 0px 30px;
+}
+.container nav ul .right
+{
+    border-radius: 0px 30px 30px 0px;
+}
+.container nav ul li a
+{
+    text-decoration: none;
+    color: black;
+}
+.container nav ul #active
+{
+    background-color: black;
+}
+.container nav ul #active a
+{
+    text-decoration: none;
+    color: white;
+}
