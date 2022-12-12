@@ -12,10 +12,7 @@ body
     background-attachment: fixed;
     background-repeat: no-repeat; 
 }
-@media (min-width: 1281px)
-{
 
-}
 .logo
 {
     width: 30%;
