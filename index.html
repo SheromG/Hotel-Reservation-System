@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Customer/CSS/style.css">
+    <script src = "Customer/JS/function.js"></script>
     <link rel="icon" type="image/x-icon" href="Customer/Media/Icon.jpg">
     <title>Sign In</title>
 </head>
@@ -23,10 +24,10 @@
                     <input type="text" placeholder="Enter Email or Username" name="username" required>
                 </div>
                 <div>
-                    <input type="text" placeholder="Enter Password" name="password" required>
+                    <input type="password" placeholder="Enter Password" name="password" required>
                 </div>
                 <div class = "button">
-                    <input type="Submit" value="Submit" name="submit">
+                    <input type="Submit" value="Submit" name="submit" onclick="signin()">
                 </div>
                 <div class = "button" id = "forgot">
                     <a href = "#">Forgot Password?</a>
