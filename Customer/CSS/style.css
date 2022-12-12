@@ -12,6 +12,10 @@ body
     background-attachment: fixed;
     background-repeat: no-repeat; 
 }
+@media (min-width: 1281px)
+{
+
+}
 .logo
 {
     width: 30%;
@@ -44,6 +48,18 @@ body
     list-style: none;
     padding: 15px;
     font-family: "Lucida Console";
+}
+@media (min-width: 768px) and (max-width: 1280px)
+{
+    .container nav .top
+    {
+        width: 60%;
+        margin-left: 20%;
+    }
+    .container nav div div h2
+    {
+        font-size: large;
+    }
 }
 .container nav div div a
 {
@@ -130,4 +146,52 @@ body
     margin-top: 50px;
     color: lightslategray;
     text-align: center;
+}
+@media screen and (orientation:portrait)
+{
+    .logo
+    {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .container
+    {
+        width: 90%;
+        height: 30em;
+        margin-left: 5%;
+    }
+    .container nav .top
+    {
+        width: 80%;
+        margin-left: 10%;
+        font-size: small;
+    }
+    .container2
+    {
+        margin-top: 0px;
+        width: 85%;
+        margin-left: 7.5%;
+    }
+    .container2 form div input
+    {
+        font-size: medium;
+    }
+    .container2 form .button input
+    {
+        font-size: large;
+        margin-left: 12.5%;
+        width: 75%;
+    }
+    .container2 form #forgot
+    {
+        margin-top: -20px;
+    }
+    .container2 form #forgot a 
+    {
+        margin-top: 15px;
+    }
+    .copy
+    {
+        margin-top: 60px;
+    }
 }
