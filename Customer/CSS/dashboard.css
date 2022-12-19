@@ -34,7 +34,14 @@ p
     display: flex;
     justify-content: center;
     color: #767676;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
+}
+h3
+{
+    font-family: "Arial";
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
 }
 .account .package
 {
@@ -45,6 +52,7 @@ p
     background-repeat: no-repeat;
     width: 89%;
     margin-left: 5%;
+    margin-bottom: 20px;
 }
 .account .package h4
 {
@@ -60,4 +68,41 @@ p
 .account .package .dollars
 {
     font-size: 5em;
+}
+.account .buttons
+{
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    justify-content:space-between;
+}
+.account .buttons button
+{
+    width: 48%;
+    height: 60px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+.account .buttons .extend
+{
+    background-color: #28a745;
+    color: white;
+}
+.account .buttons .extend:hover
+{
+    background-color: white;
+    color: #28a745;
+    border: 2px solid #28a745;
+}
+.account .buttons .refund
+{
+    background-color: #dd3948;
+    color: white;
+}
+.account .buttons .refund:hover
+{
+    background-color: white;
+    color: #dd3948;
+    border: 2px solid #dd3948;
 }
