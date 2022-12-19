@@ -12,38 +12,29 @@
 </head>
 <body>
     <nav>
-        <section class = "space"></section>
-        <div class = "navactive"><a href = ""><img src ="../Media/Icons/Dashboard.png"><h5>Dashboard</h5></a></div>
-        <div><a href = "../Webpages/Booking.html"><img src ="../Media/Icons/Booking.png"><h5>Booking</h5></a></div>
-        <div><a href = "../Webpages/Payment.html"><img src ="../Media/Icons/Payment.png"><h5>Payment</h5></a></div>
-        <div><a href = "../Webpages/Promos.html"><img src ="../Media/Icons/Promos.png"><h5>Promos</h5></a></div>
-        <div><a href = "../Webpages/Facilities.html"><img src ="../Media/Icons/Facilities.png"><h5>Facilities</h5></a></div>
-        <div><a href = "../Webpages/Facilities.html"><img src ="../Media/Icons/About.png"><h5>About</h5></a></div>
+        <div class = "account">
+            <img src = "../Media/Icons/Dashboard - Account-Pic.png" class = "profilepic">
+            <div class = "data-account">
+                <h2>FirstName LastName</h2>
+                <p>ID:<i>0987654321</i></p>
+                <h3>Room Number: &nbsp;<strong>123</strong></h3>
+                <h3>Status: &nbsp; <strong>Checked In</strong></h3>
+            </div>
+        </div>
+        <div class = "navigation">
+            <div class = "navactive"><a href = ""><img src ="../Media/Icons/Dashboard.png"><h5>Dashboard</h5></a></div>
+            <div><a href = "../Webpages/Booking.html"><img src ="../Media/Icons/Booking.png"><h5>Booking</h5></a></div>
+            <div><a href = "../Webpages/Payment.html"><img src ="../Media/Icons/Payment.png"><h5>Payment</h5></a></div>
+            <div><a href = "../Webpages/Promos.html"><img src ="../Media/Icons/Promos.png"><h5>Promos</h5></a></div>
+            <div><a href = "../Webpages/Facilities.html"><img src ="../Media/Icons/Facilities.png"><h5>Facilities</h5></a></div>
+            <div><a href = "../Webpages/Facilities.html"><img src ="../Media/Icons/About.png"><h5>About</h5></a></div>
+        </div>
+        <div class = "logout">
+            <div><a href = "../../index.html"><img src ="../Media/Icons/Logout.png"><h5>Logout</h5></a></div>
+        </div>
+        
     </nav>
-    <div class = "account">
-        <h1>Account</h1>
-        <img src = "../Media/Icons/Dashboard - Account-Pic.png" class = "profilepic">
-        <h2>FirstName LastName</h2>
-        <p>ID:<i>0987654321</i></p>
-        <h3>Room Number: 123</h3>
-        <h3>Status: Checked In</h3>
-        <div class = "package">
-            <table >
-                <tr valign="top">
-                    <td><h4>Current Package: </h4></td>
-                    <td class = "classic"><h4>Classic </h4></td>
-                </tr>
-                <tr valign="top">
-                    <td><h4>Ammount Payable: </h4></td>
-                    <td class = "dollars"><h4>$99</h4></td>
-                </tr>
-            </table>
-        </div>
-        <div class = "buttons">
-            <button class = "extend">Extend</button>
-            <button class = "refund">Refund</button>
-        </div>
-    </div>
+
 
     <div class = "main">
         <section class = "db-space"></section>
@@ -55,11 +46,26 @@
             <h2>Tuesday, December 20, 2022</h2>
             <h2>12:00PM</h2>
         </div>
-        <div class = "feedback">
-            <h1></h1>
+        <div class = "analytics">
+            <div class = "package">
+                <table >
+                    <tr valign="top">
+                        <td><h4>Current Package: </h4></td>
+                        <td class = "classic"><h4>Classic </h4></td>
+                    </tr>
+                    <tr valign="top">
+                        <td><h4>Ammount Payable: </h4></td>
+                        <td class = "dollars"><h4>$99</h4></td>
+                    </tr>
+                </table>
+            </div>
+            <div class = "buttons">
+                <button class = "extend">Extend</button>
+                <button class = "refund">Refund</button>
+            </div>
         </div>
-        <div class = "feedback-results">
-            <h1></h1>
+        <div class = "feedback">
+            <h1>Feedback</h1>
         </div>
     </div>
 </body>
