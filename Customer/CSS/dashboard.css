@@ -167,3 +167,46 @@ h3
         margin-top: 10px;
     }
 }
+
+.main
+{
+    margin-left: 7%;
+}
+.main .db-space
+{
+    height: 15px;
+}
+.main .data
+{
+    background-color: white;
+    height: 50%;
+    width: 73%;
+    border-radius: 10px;
+}
+.main .data h3
+{
+    justify-content: flex-start;
+    padding: 8px 10px;
+    color: #767676;
+}
+.main .data h2
+{
+    justify-content: flex-start;
+    padding: 8px 10px;
+}
+.main .feedback
+{
+    background-color: white;
+    height: 50%;
+    width: 73%;
+    margin-top: 1%;
+    border-radius: 10px;
+}
+.main .feedback-results
+{
+    background-color: white;
+    height: 50%;
+    width: 73%;
+    margin-top: 1%;
+    border-radius: 10px;
+}
