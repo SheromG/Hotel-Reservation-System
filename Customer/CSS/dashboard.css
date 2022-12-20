@@ -144,13 +144,6 @@
     border-radius: 10px;
     margin-bottom: 1%;
 }
-.main .feedback h1
-{
-    font-family:"Arial" ;
-    font-weight: bold;
-    margin-left:10px;
-    color:#767676
-}
 .info
 {
     color:black;
@@ -243,6 +236,7 @@ span:before
     .main
     {
         margin-left: 0%;
+        margin-top: 11%;
     }
     .main .db-space
     {
@@ -251,27 +245,13 @@ span:before
     .main .data
     {
         display: flex;
+        flex-direction: column;
     }
     .main .data .informatics
     {
-        background-color: white;
-        height: 50%;
-        width: 66%;
+        width: 96%;
+        margin-left: 2%;
         border-radius: 10px;
-        display: flex;
-    }
-    .main .data h3
-    {
-        justify-content: flex-start;
-        padding: 8px 10px;
-        color: #767676;
-    }
-    .main .data h2
-    {
-        justify-content: flex-start;
-        padding: 5px 10px;
-        font-family: "Arial";
-
     }
     .data .package
     {
@@ -279,44 +259,26 @@ span:before
         background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url("../Media/Icons/Dashboard - Package.jpg");
         background-size: 100% 100%;
         background-repeat: no-repeat;
-        width: 33%;
-        margin: 0px 1%;
-        border: 2px solid white;
+        width: 96%;
+        margin: 2% 2%;
+        border: 3px solid white;
+        box-sizing: border-box;
         display: flex;
         justify-content:space-evenly;
     }
-    .data .package h4
-    {
-        padding: 15px 10px;
-        color: white;
-        font-family: "Arial";
-
-    }
-    .data .package .classic
-    {
-        color: white;
-        font-size: 3em;
-        text-align: center;
-    }
-    .data .package .dollars
-    {
-        color: white;
-        font-size: 5em;
-        text-align: center;
-    }
-
     .main .analytics
     {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        height: 50%;
         width: 99%;
-        margin-top: 1%;
     }
     .analytics .buttons
     {
-        width: 32.5%;
-        background-color: white;
+        width: 96%;
+        margin-left: 2%;
+        margin-bottom: 2%;
+        background-color: transparent;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
@@ -325,99 +287,50 @@ span:before
     }
     .analytics .buttons h3
     {
-        padding: 5px 10px;
-        color: #767676;
+        display: none;
     }
     .analytics .buttons h2
     {
-        padding: 10px 15px;
-        font-family: "Arial";
-        text-align: center;
+        display: none;
     }
     .analytics .buttons button
     {
-        margin:0px 0px 12px 0px;
+        margin:0px 0px 0px 0px;
         padding: 5px;
-        width: 50%;
+        width: 100%;
         height: 60px;
         font-size: 1.5em;
         border-radius: 15px;
         border: 2px solid transparent;
     }
-    .analytics .buttons .upgrade
-    {
-        background-color: #007afe;
-        color: white;
-    }
-    .analytics .buttons .upgrade:hover
-    {
-        background-color: white;
-        color: #007afe;
-        border: 2px solid #007afe;
-    }
-    .analytics .buttons .extend
-    {
-        background-color: #28a745;
-        color: white;
-    }
-    .analytics .buttons .extend:hover
-    {
-        background-color: white;
-        color: #28a745;
-        border: 2px solid #28a745;
-    }
-    .analytics .buttons .refund
-    {
-        background-color: #dd3948;
-        color: white;
-    }
-    .analytics .buttons .refund:hover
-    {
-        background-color: white;
-        color: #dd3948;
-        border: 2px solid #dd3948;
-    }
+    
     .main .feedback
     {
         background-color: white;
         height: 50%;
-        width: 99%;
-        margin-top: 1%;
+        width: 96%;
+        margin: 2%;
         border-radius: 10px;
-        margin-bottom: 1%;
-    }
-    .main .feedback h1
-    {
-        font-family:"Arial" ;
-        font-weight: bold;
-        margin-left:10px;
-        color:#767676
-    }
-    .info
-    {
-        color:black;
-        font-size: 125%;
-        font-family:"Arial";
     }
     .info p
     {
-        margin-top: 5px;
-        font-family:"Arial";
+        margin-left: 0px;
+    }
+    .info tr th p
+    {
         font-size: 100%;
-        margin-left:10px;
-        font-weight: 100;
+        width: 80%;
+        margin-left: 15%;
+    }
+    .info tr td p
+    {
+        font-size: 100%;
+        width: 100%;
+        margin-left: 30%;
     }
     #textarea
     {
-        width: 90%;
-        margin-left: 5%;
-        background-color: transparent;
-        color:black;
-        font-size: 125%;
-        border-radius: 20px;
-        border: 2px solid black;
-        outline-color: black;
-        resize: none;
+        margin-left: 10%;
     }
     #submit
     {
@@ -426,58 +339,18 @@ span:before
         font-size: 150%;
         border: 2px solid black;
         border-radius: 30px;
-        width: 25%;
+        width: 50%;
         height: 6vh;
-        margin: 10px;
-    }
-    #submit:hover
-    {
-        background-color: black;
-        color:white;
-    }
-    #submit:active 
-    {
-        transform: translateY(4px);
+        margin: 10px 0px;
+        margin-left: 12.5%;
+
     }
     form 
     {
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-    .radio
-    {
-        position: absolute;
-        opacity: 0;
+        flex-direction: column;
+        align-items:flex-start;
+        margin-left: 30%;
     }
 
-    .radio:checked + span:before 
-    {
-        box-shadow: inset 0 0 0 0.45em black;
-    }
-    span
-    {
-        display: flex;
-        align-items: center;
-        padding: 0.25em;
-        border-radius: 99em; 
-        transition: 0.25s ease;
-    }
-    span:hover 
-    {
-        background-color: rgba(255, 255, 255, 0.226);
-    }
-    span:before 
-    {
-        display: flex;
-        content: "";
-        width: 1.5em;
-        height: 1.5em;
-        border-radius: 50%;
-        margin-right: 0.375em;
-        transition: 0.25s ease;
-        box-shadow: inset 0 0 0 0.1em black;
-    }
 }
