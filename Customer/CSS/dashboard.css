@@ -271,7 +271,7 @@ span:before
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 99%;
+        width: 100%;
     }
     .analytics .buttons
     {
@@ -310,7 +310,7 @@ span:before
         height: 50%;
         width: 96%;
         margin: 2%;
-        border-radius: 10px;
+        border-radius: 15px;
     }
     .info p
     {
@@ -352,5 +352,4 @@ span:before
         align-items:flex-start;
         margin-left: 30%;
     }
-
 }
