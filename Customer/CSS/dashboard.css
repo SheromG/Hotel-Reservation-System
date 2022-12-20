@@ -218,7 +218,7 @@ span
 }
 span:hover 
 {
-    background-color: rgba(255, 255, 255, 0.226);
+    background-color: rgba(105, 105, 105, 0.5);
 }
 span:before 
 {
