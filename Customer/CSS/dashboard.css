@@ -235,7 +235,7 @@ span:before
 {
     .main
     {
-        margin-left: 0%;
+        margin-left: 0% !important;
         margin-top: 11%;
     }
     .main .db-space
