@@ -12,6 +12,7 @@
     height: 50%;
     width: 99%;
     border-radius: 10px;
+    display: flex;
 }
 .main .data h3
 {
@@ -23,63 +24,85 @@
 {
     justify-content: flex-start;
     padding: 8px 10px;
+    font-family: "Arial";
+
 }
-.main .feedback
-{
-    background-color: white;
-    height: 50%;
-    width: 99%;
-    margin-top: 1%;
-    border-radius: 10px;
-}
-.main .analytics
-{
-    background-color: white;
-    height: 50%;
-    width: 99%;
-    margin-top: 1%;
-    border-radius: 10px;
-}
-.analytics .package
+.data .package
 {
     height: 175px;
     border-radius: 15px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url("../Media/Icons/Dashboard - Package.jpg");
     background-size: 100% 175px;
     background-repeat: no-repeat;
-    width: 89%;
+    width: 30%;
     margin-left: 5%;
     margin-bottom: 20px;
 }
-.analytics .package h4
+.data .package h4
 {
     padding-top: 15px;
     color: white;
     font-family: "Arial";
 
 }
-.analytics .package .classic
+.data .package .classic
 {
     font-size: 2.5em;
 }
-.analytics .package .dollars
+.data .package .dollars
 {
     font-size: 5em;
 }
+
+.main .analytics
+{
+    display: flex;
+    justify-content: space-between;
+    height: 50%;
+    width: 99%;
+    margin-top: 1%;
+}
 .analytics .buttons
 {
-    width: 90%;
-    margin-left: 5%;
+    width: 32.5%;
+    background-color: white;
+    border-radius: 10px;
     display: flex;
-    justify-content:space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.analytics .buttons h3
+{
+    padding: 5px 10px;
+    color: #767676;
+}
+.analytics .buttons h2
+{
+    padding: 10px 15px;
+    font-family: "Arial";
+    text-align: center;
 }
 .analytics .buttons button
 {
-    width: 48%;
+    margin:0px 0px 12px 0px;
+    padding: 5px;
+    width: 50%;
     height: 60px;
     font-size: 1.5em;
-    border-radius: 10px;
+    border-radius: 15px;
     border: 2px solid transparent;
+}
+.analytics .buttons .upgrade
+{
+    background-color: #007afe;
+    color: white;
+}
+.analytics .buttons .upgrade:hover
+{
+    background-color: white;
+    color: #007afe;
+    border: 2px solid #007afe;
 }
 .analytics .buttons .extend
 {
@@ -102,4 +125,107 @@
     background-color: white;
     color: #dd3948;
     border: 2px solid #dd3948;
+}
+.main .feedback
+{
+    background-color: white;
+    height: 50%;
+    width: 99%;
+    margin-top: 1%;
+    border-radius: 10px;
+    margin-bottom: 1%;
+}
+.main .feedback h1
+{
+    font-family:"Arial" ;
+    font-weight: bold;
+    margin-left:10px;
+    color:#767676
+}
+.info
+{
+    color:black;
+    font-size: 125%;
+    font-family:"Arial";
+}
+.info p
+{
+    margin-top: 5px;
+    font-family:"Arial";
+    font-size: 100%;
+    margin-left:10px;
+    font-weight: 100;
+}
+#textarea
+{
+    width: 90%;
+    margin-left: 5%;
+    background-color: transparent;
+    color:black;
+    font-size: 125%;
+    border-radius: 20px;
+    border: 2px solid black;
+    outline-color: black;
+    resize: none;
+}
+#submit
+{
+    font-family:"Courier New" ;
+    background-color: transparent;
+    font-size: 150%;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 25%;
+    height: 6vh;
+    margin: 10px;
+}
+#submit:hover
+{
+    background-color: black;
+    color:white;
+}
+#submit:active 
+{
+    transform: translateY(4px);
+}
+form 
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.radio
+{
+    position: absolute;
+    opacity: 0;
+}
+
+.radio:checked + span:before 
+{
+    box-shadow: inset 0 0 0 0.45em black;
+}
+span
+{
+    display: flex;
+    align-items: center;
+    padding: 0.25em;
+    border-radius: 99em; 
+    transition: 0.25s ease;
+}
+span:hover 
+{
+    background-color: rgba(255, 255, 255, 0.226);
+}
+span:before 
+{
+    display: flex;
+    content: "";
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    margin-right: 0.375em;
+    transition: 0.25s ease;
+    box-shadow: inset 0 0 0 0.1em black;
 }
