@@ -19,7 +19,7 @@
     width: 80%;
     margin-left: 10%;
     line-height: 1.5;
-
+    font-weight: 150;
 }
 .abouticons
 {
@@ -59,4 +59,73 @@
 .abouticons div .phone
 {
     flex:30%;
+}
+@media screen and (orientation:portrait)
+{
+    .main
+    {
+        margin-left: 0%;
+        margin-top: 12%;
+        position: relative;
+    }
+
+    .main div img
+    {
+        width: 50%;
+        margin-left: 25%;
+        margin-bottom: -10px;
+    }
+    .main div h2
+    {
+        color: white;
+        width: 80%;
+        margin-left: 10%;
+        line-height: 2;
+        font-size: medium;
+        font-weight: 100;
+
+    }
+    .abouticons
+    {
+        margin-top: 20px;
+        width: 90%;
+    }
+    .abouticons div
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .abouticons div div
+    {
+        width: 90%;
+        margin-left: 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .abouticons div div img
+    {
+        width:15%;
+        margin: 0px 15px;
+    }
+    .abouticons div div h2
+    {
+        font-size: 1.5em;
+        color: white;
+        padding: 10px 0px;
+        margin-left: -8px;
+    }
+    .abouticons div .facebook
+    {
+        flex:30%;
+    }
+    .abouticons div .gmail
+    {
+        flex:40%;
+    }
+    .abouticons div .phone
+    {
+        flex:30%;
+    }
 }
