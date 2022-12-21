@@ -1,0 +1,105 @@
+.main
+{
+    margin-left: 21%;
+}
+.main .promos-space
+{
+    height: 15px;
+}
+.main .promo
+{
+    background-color: white;
+    width: 99%;
+    border-radius: 15px;
+}
+.main .promo .promotitle
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+.main .promo .promotitle h1
+{
+    font-family: 'Arial';
+    font-weight: bold;
+}
+.main .promo .promotitle h3
+{
+    font-size: 150%;
+    font-family: 'Lucida Sans';
+}
+.main .promo .promotitle h3 span
+{
+    font-size: 250%;
+}
+.main .exclusive
+{
+    margin-top: 1%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.main .exclusive .exclusive-promos
+{
+    background-color: white;
+    border-radius: 15px;
+    height: 500%;
+    width: 49%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
+@media screen and (orientation:portrait)
+{
+    .main
+    {
+        margin-left: 0%;
+        margin-top: 11%;
+    }
+    .main .promos-space
+    {
+        height: 15px;
+    }
+    .main .promo
+    {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .main .promo .promotitle
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1%;
+    }
+    .main .promo .promotitle h1
+    {
+        font-family: 'Arial';
+        font-weight: bold;
+        font-size: 225%;
+        text-align: center;
+    }
+    .main .promo .promotitle h3
+    {
+        font-size: 100%;
+    }
+    .main .promo .promotitle h3 span
+    {
+        font-size: 150%;
+        font-weight: bold;
+    }
+    .main .exclusive
+    {
+        margin-top: 3%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main .exclusive .exclusive-promos
+    {
+        background-color: white;
+        border-radius: 15px;
+        height: 500%;
+        width: 90%;
+        margin-left: 5%;
+        margin-bottom: 3%;
+    }
+}

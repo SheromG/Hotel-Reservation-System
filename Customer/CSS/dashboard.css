@@ -149,6 +149,8 @@
     color:black;
     font-size: 125%;
     font-family:"Arial";
+    width: 90%;
+    margin-left: 5%;
 }
 .info p
 {
@@ -315,6 +317,7 @@ span:before
     .info
     {
         width: 80%;
+        margin-left: 0%;
     }
     .info p
     {
@@ -323,14 +326,15 @@ span:before
     .info tr th p
     {
         font-size: 100%;
-        width: 80%;
-        margin-left: 15%;
+        width: 90%;
+        margin-left: 17.5%;
+        text-align: center;
     }
     .info tr td p
     {
         font-size: 100%;
         width: 100%;
-        margin-left: 30%;
+        margin-left: 35%;
     }
     #textarea
     {
@@ -355,6 +359,6 @@ span:before
         display: flex;
         flex-direction: column;
         align-items:flex-start;
-        margin-left: 30%;
+        margin-left: 37.5%;
     }
 }
