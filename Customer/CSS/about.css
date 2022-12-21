@@ -1,0 +1,42 @@
+.main
+{
+    margin-left: 21%;
+    display: flex;
+    font-family: "Arial";
+    position: fixed;
+    flex-direction: column;
+}
+
+.main div img
+{
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: -20px;
+}
+.main div h2
+{
+    color: white;
+    width: 80%;
+    margin-left: 10%;
+    line-height: 1.5;
+
+}
+.abouticons
+{
+    display: flex;
+    margin-top: 15px;
+    width:90%;
+}
+.abouticons table tr th
+{
+    text-align: center;
+    vertical-align: middle;
+}
+.abouticons table tr th img
+{
+    width:40%;
+}
+.abouticons table tr th h2
+{
+    font-size: 2em;
+}
