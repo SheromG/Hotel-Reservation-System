@@ -21,22 +21,31 @@
     line-height: 1.5;
 
 }
-.abouticons
+footer
+{
+    margin-left:20%;
+    bottom: 0;
+    position: fixed;
+    background-color: black;
+    width: 80%;
+}
+footer div
 {
     display: flex;
-    margin-top: 15px;
-    width:90%;
 }
-.abouticons table tr th
+footer div div
 {
-    text-align: center;
-    vertical-align: middle;
+    width: 80%;
+    margin-left: 5%;
 }
-.abouticons table tr th img
+footer div div img
 {
-    width:40%;
+    width:15%;
+    margin: 0px 15px;
 }
-.abouticons table tr th h2
+footer div div h2
 {
-    font-size: 2em;
+    font-size: 2.2em;
+    color: white;
+    padding: 10px 0px;
 }
