@@ -48,11 +48,7 @@ nav .navigation div a h5
 }
 nav .navigation div:hover
 {
-    background-image: linear-gradient(to  right, white, dimgray);
-}
-nav .navigation div a h5:hover
-{
-    color: white;
+    background-color: lightgray;
 }
 nav .logout
 {
@@ -78,7 +74,7 @@ nav .logout a img
 }
 nav .logout div a:hover
 {
-    background-image: linear-gradient(to  bottom, white, dimgray);
+    background-color: dimgray;
 }
 
 @media (min-width: 768px) and (max-width: 1280px)
@@ -147,10 +143,6 @@ nav .logout div a:hover
     {
         display: flex;
         flex-direction: column;
-    }
-    nav .navigation div:hover
-    {
-        background-image: linear-gradient(to bottom, white, dimgray);
     }
     nav .logout
     {
