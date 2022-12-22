@@ -33,8 +33,12 @@
             padding-inline: 10px;
             width: 100vw;
             height: 200vh;
-            max-width: 1400px;
+
+            /* Set max screen size */
+            max-width: 2400px;
             max-height: 700px;
+
+
             margin: 0 auto;
 
             display: flex;
@@ -152,11 +156,12 @@
                     <a href="./index2.html" class="form-link">Signup</a>
                 </div>
                 <div>
-                    <input class="form-control" type="text" placeholder="Enter Email or Username" name="username"
-                        required>
+                    <input id="username" class="form-control" type="text" placeholder="Enter Email or Username"
+                        name="username" required>
                 </div>
                 <div>
-                    <input class="form-control" type="password" placeholder="Enter Password" name="password" required>
+                    <input id="password" class="form-control" type="password" placeholder="Enter Password"
+                        name="password" required>
                 </div>
                 <div class="button">
                     <button class="btn submit center" type="submit">Login</button>
@@ -170,10 +175,21 @@
     <script>
         //target form
         const form = document.querySelector("#form");
+        const username = document.querySelector("#username");
+        const password = document.querySelector("#password");
 
         // prevent form from submitting
         form.addEventListener('submit', (event) => {
             event.preventDefault();
+
+            console.log(username.value, password.value);
+
+            //redirect to admin
+            if (username.value === "admin" && password.value === "admin") {
+                location.replace("admin/admin.html");
+                return;
+            }
+
             location.replace("Customer/Webpages/Dashboard.html")
         })
     </script>
