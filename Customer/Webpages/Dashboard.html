@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,34 +11,49 @@
     <link rel="icon" type="image/x-icon" href="../Media/Icon.jpg">
     <title>Dashboard</title>
 </head>
-<body>
+
+<body onload="load()">
     <nav>
-        <div class = "account">
-            <img src = "../Media/Icons/Dashboard - Account-Pic.png" class = "profilepic">
-            <div class = "data-account">
-                <h2>FirstName LastName</h2>
+        <div class="account">
+            <img src="../Media/Icons/Dashboard - Account-Pic.png" class="profilepic">
+            <div class="data-account">
+                <h2 id="name">FirstName LastName</h2>
                 <p>ID:<i>0987654321</i></p>
                 <h3>Room Number: &nbsp;<strong>123</strong></h3>
                 <h3>Status: &nbsp; <strong>Checked In</strong></h3>
             </div>
         </div>
-        <div class = "navigation">
-            <div class = "navactive"><a href = ""><img src ="../Media/Icons/Dashboard.png"><h5>Dashboard</h5></a></div>
-            <div><a href = "../Webpages/Booking.html"><img src ="../Media/Icons/Booking.png"><h5>Booking</h5></a></div>
-            <div><a href = "../Webpages/Payment.html"><img src ="../Media/Icons/Payment.png"><h5>Payment</h5></a></div>
-            <div><a href = "../Webpages/Promos.html"><img src ="../Media/Icons/Promos.png"><h5>Promos</h5></a></div>
-            <div><a href = "../Webpages/Facilities.html"><img src ="../Media/Icons/Facilities.png"><h5>Facilities</h5></a></div>
-            <div><a href = "../Webpages/About.html"><img src ="../Media/Icons/About.png"><h5>About</h5></a></div>
+        <div class="navigation">
+            <div class="navactive"><a href=""><img src="../Media/Icons/Dashboard.png">
+                    <h5>Dashboard</h5>
+                </a></div>
+            <div><a href="../Webpages/Booking.html"><img src="../Media/Icons/Booking.png">
+                    <h5>Booking</h5>
+                </a></div>
+            <div><a href="../Webpages/Payment.html"><img src="../Media/Icons/Payment.png">
+                    <h5>Payment</h5>
+                </a></div>
+            <div><a href="../Webpages/Promos.html"><img src="../Media/Icons/Promos.png">
+                    <h5>Promos</h5>
+                </a></div>
+            <div><a href="../Webpages/Facilities.html"><img src="../Media/Icons/Facilities.png">
+                    <h5>Facilities</h5>
+                </a></div>
+            <div><a href="../Webpages/About.html"><img src="../Media/Icons/About.png">
+                    <h5>About</h5>
+                </a></div>
         </div>
-        <div class = "logout">
-            <div><a href = "../../index.html"><img src ="../Media/Icons/Logout.png"><h5>Logout</h5></a></div>
+        <div class="logout">
+            <div><a href="../../index.html"><img src="../Media/Icons/Logout.png">
+                    <h5>Logout</h5>
+                </a></div>
         </div>
     </nav>
 
-    <div class = "main">
-        <section class = "db-space"></section>
-        <div class = "data">
-            <div class = "informatics">
+    <div class="main">
+        <section class="db-space"></section>
+        <div class="data">
+            <div class="informatics">
                 <div>
                     <h3>Check in:</h3>
                     <h2>Monday, December 19, 2022</h2>
@@ -46,66 +62,92 @@
                     <h2>Tuesday, December 20, 2022</h2>
                     <h2>12:00PM</h2>
                 </div>
-                <div class ="percent">
+                <div class="percent">
                 </div>
             </div>
-            <div class = "package">
-                <table >
+            <div class="package">
+                <table>
                     <tr valign="top">
-                        <td><h4>Current Package: </h4></td>
-                        <td class = "classic"><h4>Classic </h4></td>
+                        <td>
+                            <h4>Current Package: </h4>
+                        </td>
+                        <td class="classic">
+                            <h4>Classic </h4>
+                        </td>
                     </tr>
                     <tr valign="top">
-                        <td><h4>Amount Payable: </h4></td>
-                        <td class = "dollars"><h4>&nbsp;$99</h4></td>
+                        <td>
+                            <h4>Amount Payable: </h4>
+                        </td>
+                        <td class="dollars">
+                            <h4>&nbsp;$99</h4>
+                        </td>
                     </tr>
                 </table>
             </div>
         </div>
-    <div class = "analytics">
-        <div class = "buttons">
-            <h3>Request for an upgrade</h3>
-            <h2>Upgrade your current package  to more luxurious package!</h2>
-            <button class = "upgrade">Upgrade</button>
+        <div class="analytics">
+            <div class="buttons">
+                <h3>Request for an upgrade</h3>
+                <h2>Upgrade your current package to more luxurious package!</h2>
+                <button class="upgrade">Upgrade</button>
+            </div>
+            <div class="buttons">
+                <h3>Request for Extension</h3>
+                <h2>Extend your stay in <br>our hotel!</h2>
+                <button class="extend">Extend</button>
+            </div>
+            <div class="buttons">
+                <h3>Request a Refund</h3>
+                <h2>Stop Subscribing to your current package.</h2>
+                <button class="refund">Refund</button>
+            </div>
         </div>
-        <div class = "buttons">
-            <h3>Request for Extension</h3>
-            <h2>Extend your stay in <br>our hotel!</h2>
-            <button class = "extend">Extend</button>
-        </div>
-        <div class = "buttons">
-            <h3>Request a Refund</h3>
-            <h2>Stop Subscribing to your current package.</h2>
-            <button class = "refund">Refund</button>
+        <div class="feedback">
+            <table class="info">
+                <tr>
+                    <th colspan="15">
+                        <p>How would you rate your stay at our hotel:</p>
+                    </th>
+                </tr>
+                <tr>
+                    <td colspan="20">
+                        <form method="POST">
+                            <label><input class="radio" type="radio" name="rate" value="Very Good"><span>Very
+                                    Good</span></label>
+                            <label><input class="radio" type="radio" name="rate" value="Good"><span>Good</span></label>
+                            <label><input class="radio" type="radio" name="rate"
+                                    value="Neutral"><span>Neutral</span></label>
+                            <label><input class="radio" type="radio" name="rate" value="Bad"><span>Bad</span></label>
+                            <label><input class="radio" type="radio" name="rate" value="Very Bad"><span>Very
+                                    Bad</span></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="15">
+                        <p>Give us feedback:</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="15">
+                        <center><textarea id="textarea" rows="10" name="feedback"></textarea></center>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="15">
+                        <center><input type="submit" id="submit" value="Submit" name="submit"></center>
+                    </td>
+                    </form>
+                </tr>
+            </table>
         </div>
     </div>
-    <div class = "feedback">
-        <table class = "info">
-            <tr>
-                <th colspan = "15"><p>How would you rate your stay at our hotel:</p></th>
-            </tr>
-            <tr>
-                <td colspan="20">
-                    <form method="POST">
-                        <label><input class = "radio" type="radio" name ="rate" value = "Very Good"><span>Very Good</span></label>  
-                        <label><input class = "radio" type="radio" name ="rate" value = "Good"><span>Good</span></label>
-                        <label><input class = "radio" type="radio" name ="rate" value = "Neutral"><span>Neutral</span></label>
-                        <label><input class = "radio" type="radio" name ="rate" value = "Bad"><span>Bad</span></label>
-                        <label><input class = "radio" type="radio" name ="rate" value = "Very Bad"><span>Very Bad</span></label>
-                </td>
-            </tr>
-            <tr>
-                <td colspan = "15"><p>Give us feedback:</p> </td>
-            </tr>
-            <tr>
-                <td colspan = "15"><center><textarea id="textarea"  rows="10" name = "feedback"></textarea></center></td>
-            </tr>
-            <tr>
-                <td colspan = "15"><center><input type="submit" id = "submit" value="Submit" name = "submit"></center></td>
-                </form>
-            </tr>
-    </table>
-    </div>
-    </div>
+    <script>
+        function load() {
+            const name = document.querySelector('#name');
+            name.innerHTML = sessionStorage.getItem("username");
+        }
+    </script>
 </body>
+
 </html>

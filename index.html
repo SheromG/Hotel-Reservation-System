@@ -211,7 +211,8 @@
 
                 users.forEach(user => {
                     if (user.username === username.value && user.password === password.value) {
-                        location.replace("Customer/Webpages/Dashboard.html")
+                        location.replace("Customer/Webpages/Dashboard.html");
+                        sessionStorage.setItem("username", user.username);
                     }
                 });
 
