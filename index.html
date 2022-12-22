@@ -143,6 +143,11 @@
             border-bottom: 2px solid black;
             font-size: 1.2rem;
         }
+
+        .error {
+            color: red;
+            font-size: 12px;
+        }
     </style>
 
     <!-- wrapper -->
@@ -169,6 +174,8 @@
                     <a class="secondary center txt-center" href="#">Forgot Password?</a>
                 </div>
                 <span class="txt-center center secondary">Copyrights ABC Hotel 2022</span>
+                <!-- error display -->
+                <span class="txt-center center error"></span>
             </form>
         </div>
     </section>
@@ -178,20 +185,40 @@
         const form = document.querySelector("#form");
         const username = document.querySelector("#username");
         const password = document.querySelector("#password");
+        const errorDisplay = document.querySelector(".error");
 
         // prevent form from submitting
-        form.addEventListener('submit', (event) => {
+        form.addEventListener('submit', async (event) => {
             event.preventDefault();
 
-            console.log(username.value, password.value);
+            try {
 
-            //redirect to admin
-            if (username.value === "admin" && password.value === "admin") {
-                location.replace("admin/admin.html");
-                return;
+
+                //redirect to admin
+                if (username.value === "admin" && password.value === "admin") {
+                    location.replace("admin/admin.html");
+                    return;
+                }
+
+                let data = await fetch('users.json');
+
+
+                if (!data.ok) {
+                    throw new Error('Internal Error');
+                }
+
+                const users = await data.json();
+
+                users.forEach(user => {
+                    if (user.username === username.value && user.password === password.value) {
+                        location.replace("Customer/Webpages/Dashboard.html")
+                    }
+                });
+
+                throw new Error('Incorrect Username or Password')
+            } catch (error) {
+                errorDisplay.innerHTML = error.message;
             }
-
-            location.replace("Customer/Webpages/Dashboard.html")
         })
     </script>
 </body>

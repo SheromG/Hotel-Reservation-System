@@ -1,40 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Customer/CSS/style.css">
-    <script src = "Customer/JS/function.js"></script>
+    <!-- <link rel="stylesheet" href="Customer/CSS/style.css"> -->
+    <script src="Customer/JS/function.js"></script>
     <link rel="icon" type="image/x-icon" href="Customer/Media/Icon.jpg">
-    <title>Sign Up</title>
+    <title>Sign In</title>
 </head>
+
 <body>
-    <img class = "logo" src = "Customer/Media/Logo.png">
-    <div class = "container">
-        <nav>
-            <div class = "top">
-                <div class =  "left" ><a href = "index.html"><h1>Sign In</h1></a></div>
-                <div class = "right" id = "active"><a href = "index2.html" > <h1>Sign Up</h1></a></div>
-            </div>
-        </nav>
-        <div class = "container2">
-            <form>
-                <div>
-                    <input type="text" placeholder="Enter Email or Username" name="username" required>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            outline: 1px solid red;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .home {
+
+            padding-inline: 10px;
+            padding-bottom: 20px;
+
+            width: 100vw;
+            min-height: 100vh;
+
+            /* Set max screen size */
+            max-width: 2000px;
+
+            margin: 0 auto;
+
+            display: flex;
+            flex-direction: column;
+
+            /* background */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Customer/Media/Background.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .home_center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-block: 10px;
+        }
+
+        .home_form {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 10px;
+            width: 100vw;
+            height: 100vh;
+            min-width: 300px;
+            max-width: 500px;
+            min-height: 300px;
+            max-height: 400px;
+        }
+
+        .form__links {
+            max-width: 300px;
+            margin-inline: auto;
+            display: flex;
+            border-radius: 20px;
+            border: solid 1px black;
+        }
+
+        .form-link {
+            flex-basis: 50%;
+            padding: 10px 20px;
+            border-radius: inherit;
+            text-align: center;
+        }
+
+        .link-active {
+            background-color: black;
+            color: white;
+        }
+
+        .logo {
+            display: block;
+            width: 100vw;
+            max-width: 300px;
+            height: auto;
+            margin-inline: auto;
+        }
+
+        .btn {
+            background-color: white;
+            padding: 10px 30px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .submit:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .submit {
+            width: 100vw;
+            max-width: 200px;
+            margin-bottom: 10px;
+        }
+
+        .center {
+            display: block;
+            margin-inline: auto;
+        }
+
+        .secondary {
+            color: grey;
+            font-size: 12px;
+        }
+
+        .txt-center {
+            text-align: center;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid black;
+            font-size: 1.2rem;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+
+    <!-- wrapper -->
+    <section class="home">
+        <div class="home_top">
+            <img class="logo" src="Customer/Media/Logo.png">
+        </div>
+        <div class="home_center">
+            <form action="" class="home_form" id="form">
+                <div class="form__links">
+                    <a href="./index.html" class="form-link">Signin</a>
+                    <a href="#" class="form-link link-active">Signup</a>
                 </div>
                 <div>
-                    <input type="password" placeholder="Enter Password" name="password" required>
+                    <input id="username" class="form-control" type="text" placeholder="Enter Email or Username"
+                        name="username" required>
                 </div>
                 <div>
-                    <input type="password" placeholder="Confirm Password" name="password" required>
+                    <input id="password" class="form-control" type="password" placeholder="Enter Password"
+                        name="password" required>
                 </div>
-                <div class = "button">
-                    <input type="Submit" value="Submit" name="submit" onclick="signup()">
+                <div>
+                    <input id="password2" class="form-control" type="password" placeholder="Confirm Password"
+                        name="password2" required>
                 </div>
+                <div class="button">
+                    <button class="btn submit center" type="submit">Signup</button>
+                </div>
+                <span class="txt-center center secondary error"></span>
             </form>
         </div>
-    </div>
-    
+    </section>
+
+    <script>
+        const form = document.querySelector('#form');
+        const username = document.querySelector('#username');
+        const password = document.querySelector('#password');
+        const password2 = document.querySelector('#password2');
+        const errorDisplay = document.querySelector('.error');
+
+        // submit event
+        form.addEventListener('submit', (event) => {
+
+            //prevent form from submitting
+            event.preventDefault();
+
+            try {
+
+                //throw an error if password and confirm password does not match
+                if (password.value !== password2.value) {
+                    throw new Error("Password and Confirm Password Not Match!");
+                }
+
+                location.replace("index.html")
+            } catch (error) {
+                errorDisplay.innerHTML = error.message;
+            }
+        })
+    </script>
 </body>
+
 </html>

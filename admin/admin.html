@@ -5,12 +5,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin</title>
 </head>
 
 <body>
 
-    <h1>Hello Admin</h1>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 9fr;
+            gap: 10px;
+        }
+
+        .content {
+            background-color: blue;
+            overflow: auto;
+            padding: 20px;
+            height: 100vh;
+        }
+
+        .nav {
+            padding-top: 20px;
+            background-color: orange;
+            display: flex;
+            flex-direction: column;
+            max-height: 600px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav__link {
+            background-color: yellow;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav__link::before {
+            content: url('../Customer/Media/Icon.jpg');
+        }
+
+        .nav__link:hover {
+            background-color: grey;
+        }
+
+        .nav__link:last-child {
+            margin-top: auto;
+        }
+    </style>
+    <section class="wrapper">
+        <nav class="nav">
+            <a class="nav__link" href="">Home</a>
+            <a class="nav__link" href="">Home</a>
+            <a class="nav__link" href="../index.html">logout</a>
+        </nav>
+        <section class="content">
+        </section>
+    </section>
 </body>
 
 </html>
