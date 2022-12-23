@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    /* background */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Customer/Media/Background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a 
+{
+    text-decoration: none;
+    color: black;
+}
+
+.home 
+{
+    padding-inline: 10px;
+    padding-bottom: 20px;
+
+    width: 100vw;
+    min-height: 100vh;
+
+    /* Set max screen size */
+    max-width: 2000px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.home_center 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 10px;
+}
+
+.home_form 
+{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100vw;
+    height: 100vh;
+    min-width: 300px;
+    max-width: 500px;
+    min-height: 300px;
+    max-height: 400px;
+}
+
+.form__links 
+{
+    max-width: 300px;
+    margin-inline: auto;
+    display: flex;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.form-link 
+{
+    flex-basis: 50%;
+    padding: 10px 30px;
+    border-radius: inherit;
+    text-align: center;
+}
+
+.link-active 
+{
+    background-color: black;
+    color: white;
+}
+
+.logo 
+{
+    display: block;
+    width: 100vw;
+    max-width: 300px;
+    height: auto;
+    margin-inline: auto;
+}
+
+.btn
+{
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.submit:hover 
+{
+    background-color: black;
+    color: white;
+}
+
+.submit 
+{
+    width: 100vw;
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+
+.center 
+{
+    display: block;
+    margin-inline: auto;
+}
+
+.secondary 
+{
+    color: grey;
+    font-size: 12px;
+}
+
+.txt-center 
+{
+    text-align: center;
+}
+
+.form-control 
+{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+    font-size: 1.2rem;
+}
+
+.error
+{
+    color: red;
+    font-size: 12px;
+}
