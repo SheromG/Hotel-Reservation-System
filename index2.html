@@ -21,7 +21,14 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
-            outline: 1px solid red;
+        }
+        body
+        {
+            /* background */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Customer/Media/Background.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         a {
@@ -44,12 +51,6 @@
 
             display: flex;
             flex-direction: column;
-
-            /* background */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Customer/Media/Background.jpg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
         }
 
         .home_center {
@@ -80,12 +81,12 @@
             margin-inline: auto;
             display: flex;
             border-radius: 20px;
-            border: solid 1px black;
+            border: 1px solid black;
         }
 
         .form-link {
             flex-basis: 50%;
-            padding: 10px 20px;
+            padding: 10px 30px;
             border-radius: inherit;
             text-align: center;
         }
@@ -173,10 +174,11 @@
                     <input id="password2" class="form-control" type="password" placeholder="Confirm Password"
                         name="password2" required>
                 </div>
+                <span class="txt-center center secondary error"></span>
                 <div class="button">
                     <button class="btn submit center" type="submit">Signup</button>
                 </div>
-                <span class="txt-center center secondary error"></span>
+                
             </form>
         </div>
     </section>
