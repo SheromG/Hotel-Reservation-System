@@ -220,10 +220,12 @@
                     if (user.username === username.value && user.password === password.value) {
                         location.replace("Customer/Webpages/Dashboard.html");
                         sessionStorage.setItem("username", user.username);
+                        sessionStorage.setItem("password", user.password);
+                        throw new Error('');
                     }
                 });
 
-                throw new Error('Incorrect Username or Password')
+                throw new Error('Incorrect Username or Password');
             } catch (error) {
                 errorDisplay.innerHTML = error.message;
             }

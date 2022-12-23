@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/navbar.css">
     <link rel="stylesheet" href="../CSS/about.css">
+    <script src = "../JS/function.js"></script>
     <link rel="icon" type="image/x-icon" href="../Media/Icon.jpg">
     <title>About</title>
 </head>
-<body>
+<body onload="load()">
     <div class = "main">
         <div><img src = "../Media/Logo.png"></div>
         <div>
@@ -32,7 +33,7 @@
         <div class = "account">
             <img src = "../Media/Icons/Dashboard - Account-Pic.png" class = "profilepic">
             <div class = "data-account">
-                <h2>FirstName LastName</h2>
+                <h2 id="name">FirstName LastName</h2>
                 <p>ID:<i>0987654321</i></p>
                 <h3>Room Number: &nbsp;<strong>123</strong></h3>
                 <h3>Status: &nbsp; <strong>Checked In</strong></h3>
