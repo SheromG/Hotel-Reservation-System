@@ -5,10 +5,32 @@
     },
     {
         "username": "john",
-        "password": "castillo"
+        "password": "castillo",
+        "room":"001",
+        "id":"001 - 1111"
     },
     {
-        "username": "david",
-        "password": "granada"
+        "username": "sherom",
+        "password": "granada",
+        "room":"002",
+        "id":"002 - 2222"
+    },
+    {
+        "username": "mariel",
+        "password": "gabasa",
+        "room":"003",
+        "id":"003 - 3333"
+    },
+    {
+        "username": "ivan",
+        "password": "ico",
+        "room":"004",
+        "id":"004 - 4444"
+    },
+    {
+        "username": "irish",
+        "password": "lucing",
+        "room":"004",
+        "id":"005 - 5555"
     }
 ]

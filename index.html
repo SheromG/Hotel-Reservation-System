@@ -221,6 +221,8 @@
                         location.replace("Customer/Webpages/Dashboard.html");
                         sessionStorage.setItem("username", user.username);
                         sessionStorage.setItem("password", user.password);
+                        sessionStorage.setItem("room", user.room);
+                        sessionStorage.setItem("id", user.id);
                         throw new Error('');
                     }
                 });
