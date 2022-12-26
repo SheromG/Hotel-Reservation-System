@@ -13,3 +13,20 @@ const day2 = week[today.getDay()];
 
 current.innerHTML = day + ", " + currentdate;
 tomorrow.innerHTML = day2 + ", " + tomorrowdate;
+
+const progressBar = document.querySelector(".circular-progress");
+const valueContainer = document.querySelector(".value-container");
+
+let progressValue = 0;
+let progressEndValue = 80;
+
+let progress = setInterval(() => 
+{
+    progressValue++;
+    valueContainer.textContent = `${progressValue}%`;
+    progressBar.style.background = `conic-gradient( #5960c7 ${progressValue * 3.6}deg, #8e94e6 ${progressValue * 3.6}deg )`;
+    if (progressValue == progressEndValue) 
+    {
+        clearInterval(progress);
+    }
+}, 30);
