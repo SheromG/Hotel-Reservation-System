@@ -1,11 +1,52 @@
-.facilitiespicsdiv
+.maindiv
 {
     margin-left: 21%;
+    width:79%;
+    position: fixed;
+}
+.facilitiespidcdiv
+{
+    top:0;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 2.5%;
 }
 .facilitiespics
-{
-    width: 70%;
-    margin: 2.5% 4.5%;
+{   
+    width: 100%;
     border-radius: 25px;
-    position: fixed;
+
+}
+.facilitiesinfo
+{
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 25px;
+    width: 90%;
+    margin-left:  5%;
+    bottom: 0;
+    height: 10%;
+    position: absolute;
+    overflow: hidden;
+}
+.facilitiesinfo:hover
+{
+    height: 90%;
+}
+.text-middle
+{
+    text-align: center;
+    font-size: 350%;
+    font-family: 'Agency FB', sans-serif;
+
+}
+.text-justify
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin-left: 5%;
+    line-height: 1.5;
+    margin-top: 10px;
 }
