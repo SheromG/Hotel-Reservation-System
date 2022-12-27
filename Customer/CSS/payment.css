@@ -12,7 +12,7 @@
     margin-top: 1%;
     box-sizing: border-box;
 }
-.main .fillout img
+.main .fillout .scampay
 {
     width: 50%;
     margin-top: -3%;
@@ -20,6 +20,35 @@
 .main .fillout h2
 {
     font-family: 'Agency FB', sans-serif;
-    margin: -10px 0px 5px 20px;
+    margin: -10px 0px 15px 20px;
     font-size: 300%;
+}
+.main .fillout div
+{
+    display: flex;
+    margin-bottom: 50px;
+}
+.main .fillout div img
+{
+    width: 5%;
+    margin: -10px 0px 0px 20px;
+    padding: 10px;
+}
+.main .fillout div input
+{
+    width: 35%;
+    margin: -10px 0px 5px 20px;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: xx-large;
+    font-family: 'Agency FB', sans-serif;
+    letter-spacing: 2px;
+}
+.main .fillout div input:focus
+{
+    outline: none;
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
+{
+    -webkit-appearance: none;
 }
