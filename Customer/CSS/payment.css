@@ -26,7 +26,7 @@
 .main .fillout div
 {
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
 }
 .main .fillout div img
 {
@@ -36,7 +36,7 @@
 }
 .main .fillout div input
 {
-    width: 35%;
+    width: 37%;
     margin: -10px 0px 5px 20px;
     border: none;
     border-bottom: 2px solid black;
@@ -51,4 +51,30 @@
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
 {
     -webkit-appearance: none;
+}
+.main .fillout div select
+{
+    background-color:rgba(169, 169, 169, 0.2);
+    width: 37%;
+    margin: -10px 0px 5px 20px;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: xx-large;
+    font-family: 'Agency FB', sans-serif;
+    letter-spacing: 2px;
+}
+.main .fillout button
+{
+    width: 31%;
+    margin-left:3%;
+    bottom: 0;
+    margin-bottom: 3%;
+    position: fixed;
+    height: 70px;
+    font-size: xx-large;
+    font-family: Impact;
+    border-radius: 40px;
+    background-image: linear-gradient(#DC4626, #FA931F);
+    color: white;
+    border:none;
 }
