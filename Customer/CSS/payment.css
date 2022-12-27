@@ -125,6 +125,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
 .main .receipt .receipt1 .receipt12 h2
 {
     font-family: Impact;
+    font-weight: 300;
     font-size: xx-large;
 }
 .main .receipt .receipt1 .receipt12 h3
