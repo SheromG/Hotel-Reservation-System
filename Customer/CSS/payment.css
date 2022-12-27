@@ -1,0 +1,25 @@
+@import url('https://fonts.cdnfonts.com/css/agency-fb');
+
+.main
+{
+    margin-left: 21%;
+    width:78%;
+    position: fixed;
+    display: flex;
+    background-color: white;
+    height: 97%;
+    border-radius: 15px;
+    margin-top: 1%;
+    box-sizing: border-box;
+}
+.main .fillout img
+{
+    width: 50%;
+    margin-top: -3%;
+}
+.main .fillout h2
+{
+    font-family: 'Agency FB', sans-serif;
+    margin: -10px 0px 5px 20px;
+    font-size: 300%;
+}
