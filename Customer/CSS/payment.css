@@ -100,7 +100,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
 }
 .main .receipt .receipt1
 {
-    width: 350px;
+    width: 90%;
     margin: 20px;
     border: 3px solid #DC4626;
     border-radius: 25px;
@@ -131,6 +131,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
 {
     font-family: 'Agency FB', sans-serif;
     font-size: x-large;
+    font-style: italic !important;
 }
 .main .receipt .receipt1 .receipt13
 {
@@ -151,7 +152,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
 }
 .main .receipt .receipt2
 {
-    width: 350px;
+    width: 90%;
     margin: 0px 20px;
 }
 .receipt21,.receipt22, .receipt23, .receipt24, .receipt25
@@ -182,4 +183,130 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
 .small_font
 {
     font-size: 50%;
+}
+.receipt2
+{
+    padding-bottom: 25px;
+}
+
+@media screen and (orientation:portrait)
+{
+    .main
+    {
+        width:90%;
+        margin-left: 5%;
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: white;
+        border-radius: 15px;
+        margin-top: 13%;
+        box-sizing: border-box;
+    }
+    .main .fillout .scampay
+    {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .main .fillout h2
+    {
+        font-family: 'Agency FB', sans-serif;
+        margin: -10px 0px 10px 10px;
+        font-size: 150%;
+    }
+    .main .fillout div
+    {
+        display: flex;
+        margin-bottom: 15px;
+    }
+    .main .fillout div img
+    {
+        width: 15%;
+        margin: -10px 0px 0px 0px;
+        padding: 10px;
+    }
+    .main .fillout div input
+    {
+        width: 70%;
+        margin: -10px 0px 5px 10px;
+        font-size: large;
+        letter-spacing: 2px;
+    }
+    .main .fillout div select
+    {
+        width: 70%;
+        margin: 5px 0px 5px 10px;
+        font-size: large;
+        letter-spacing: 0px;
+    }
+    .main .fillout button
+    {
+        width: 90%;
+        margin-left:5%;
+        margin-bottom: 3%;
+        position: relative;
+        height: 70px;
+        font-size: xx-large;
+        font-family: Impact;
+        border-radius: 40px;
+        background-image: linear-gradient(#DC4626, #FA931F);
+        color: white;
+        border:none;
+    }
+    .main .fillout button:hover
+    {
+        background-image: linear-gradient(white, white);
+        background: -webkit-linear-gradient(#DC4626, #FA931F);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border: 3px solid #DC4626;
+    }
+    .main .receipt .receipt1
+    {
+        margin: 5% 5%;
+        border: 3px solid #DC4626;
+        border-radius: 25px;
+    }
+    .main .receipt .receipt1 .receipt11
+    {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .main .receipt .receipt1 .receipt11 img
+    {
+        width: 15%;
+    }
+    .main .receipt .receipt1 .receipt12
+    {
+        padding: 10px;
+        box-sizing: border-box;
+        margin-top: 25%;
+    }
+    .main .receipt .receipt1 .receipt12 h2
+    {
+        font-family: Impact;
+        font-size: x-large;
+    }
+    .main .receipt .receipt1 .receipt12 h3
+    {
+        font-size: large;
+        font-style: italic !important;
+    }
+
+    .main .receipt .receipt1 .receipt13 h2
+    {
+        font-size: medium;
+    }
+    .main .receipt .receipt2
+    {
+        width: 90%;
+        margin: 0px 5%;
+    }
+    .main .receipt .receipt2 h3
+    {
+        font-family: 'Agency FB', sans-serif;
+        font-size: large;
+    }
 }
