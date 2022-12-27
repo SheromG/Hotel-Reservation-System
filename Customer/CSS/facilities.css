@@ -50,3 +50,42 @@
     line-height: 1.5;
     margin-top: 10px;
 }
+
+@media screen and (orientation:portrait) 
+{
+    .maindiv
+    {
+        margin-left: 5%;
+        width:90%;
+        margin-top: 15%;
+        position: absolute;
+    }
+    .facilitiespidcdiv
+    {
+        width: 100%;
+        margin-left: 0%;
+    }
+    .facilitiespics
+    {   
+        width: 100%;
+        border-radius: 25px;
+    }
+    .facilitiesinfo
+    {
+        background-color: rgba(0, 0, 0, 0);
+        overflow:visible;
+    }
+    .text-middle
+    {
+        font-size: 250%;
+        margin-top: 30px;
+    }
+    .text-justify
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 95%;
+        margin-left: 2.5%;
+    }
+}
