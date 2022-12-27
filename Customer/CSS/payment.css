@@ -78,3 +78,11 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
     color: white;
     border:none;
 }
+.main .fillout button:hover
+{
+    background-image: linear-gradient(white, white);
+    background: -webkit-linear-gradient(#DC4626, #FA931F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 3px solid #DC4626;
+}
