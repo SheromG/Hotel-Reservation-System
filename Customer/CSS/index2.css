@@ -153,4 +153,5 @@ a
 .error_default
 {
     color: white;
+    user-select: none;
 }
