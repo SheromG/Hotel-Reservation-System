@@ -20,8 +20,8 @@
         <div class="home_center">
             <form action="" class="home_form" id="form">
                 <div class="form__links">
-                    <a href="./index.html" class="form-link">Signin</a>
-                    <a href="#" class="form-link link-active">Signup</a>
+                    <a href="./index.html" class="form-link">SignIn</a>
+                    <a href="#" class="form-link link-active">SignUp</a>
                 </div>
                 <div>
                     <input id="username" class="form-control" type="text" placeholder="Enter Email or Username"
@@ -35,11 +35,12 @@
                     <input id="password2" class="form-control" type="password" placeholder="Confirm Password"
                         name="password2" required>
                 </div>
-                <span class="txt-center center secondary error"></span>
+                <span class="txt-center center secondary error">
+                    <span class = "error_default">Error Message</span>
+                </span>
                 <div class="button">
                     <button class="btn submit center" type="submit">Signup</button>
                 </div>
-                
             </form>
         </div>
     </section>
@@ -61,7 +62,7 @@
 
                 //throw an error if password and confirm password does not match
                 if (password.value !== password2.value) {
-                    throw new Error("Password and Confirm Password Not Match!");
+                    throw new Error("Password don't match!");
                 }
 
                 location.replace("index.html")
