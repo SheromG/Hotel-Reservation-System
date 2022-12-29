@@ -5,13 +5,6 @@ const button3 = document.querySelector("#button3");
 button1.addEventListener('click', function(event) 
 {   
     event.preventDefault();
-    
-    button1.innerHTML = "Current Package";
-    button1.className =  "current"
-    button2.innerHTML = "Upgrade Package";
-    button2.className =  "upgrade"
-    button3.innerHTML = "Upgrade Package";
-    button3.className =  "upgrade"
 
     let price = "99";
     let package = "Classic";
@@ -29,13 +22,6 @@ button2.addEventListener('click', function(event)
 {   
     event.preventDefault();
 
-    button2.innerHTML = "Current Package";
-    button2.className =  "current"
-    button1.innerHTML = "Upgrade Package";
-    button1.className =  "upgrade"
-    button3.innerHTML = "Upgrade Package";
-    button3.className =  "upgrade"
-
     let price = "199";
     let package = "Junior";
 
@@ -51,13 +37,6 @@ button2.addEventListener('click', function(event)
 button3.addEventListener('click', function(event) 
 {   
     event.preventDefault();
-
-    button3.innerHTML = "Current Package";
-    button3.className =  "current"
-    button1.innerHTML = "Upgrade Package";
-    button1.className =  "upgrade"
-    button2.innerHTML = "Upgrade Package";
-    button2.className =  "upgrade"
 
     let price = "299";
     let package = "Senior";
