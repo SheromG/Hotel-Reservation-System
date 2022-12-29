@@ -1,3 +1,15 @@
+<!-- 
+
+    Todo: Setup Tabs
+
+    Tab
+        - Rooms
+        - Payments
+        - Accounts 
+        - Transactions
+        - Reservations
+        - Registration
+ -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,70 +17,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/f0632fdfe1.js" crossorigin="anonymous"></script>
     <title>Admin</title>
 </head>
 
 <body>
 
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        .wrapper {
-            display: grid;
-            grid-template-columns: 1fr 9fr;
-            gap: 10px;
-        }
-
-        .content {
-            background-color: blue;
-            overflow: auto;
-            padding: 20px;
-            height: 100vh;
-        }
-
-        .nav {
-            padding-top: 20px;
-            background-color: orange;
-            display: flex;
-            flex-direction: column;
-            max-height: 600px;
-        }
-
-        a {
-            text-decoration: none;
-            color: black;
-        }
-
-        .nav__link {
-            background-color: yellow;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-        }
-
-        .nav__link::before {
-            content: url('../Customer/Media/Icon.jpg');
-        }
-
-        .nav__link:hover {
-            background-color: grey;
-        }
-
-        .nav__link:last-child {
-            margin-top: auto;
-        }
-    </style>
     <section class="wrapper">
         <nav class="nav">
-            <a class="nav__link" href="">Home</a>
-            <a class="nav__link" href="">Home</a>
+            <a class="nav__link" href="">Dashboard</a>
+            <a class="nav__link" href="">Rooms</a>
+            <a class="nav__link" href="">Accounts</a>
+            <a class="nav__link" href="">Transaction</a>
+            <a class="nav__link" href="">Reservation</a>
             <a class="nav__link" href="../index.html">logout</a>
         </nav>
-        <section class="content">
+        <section class="content room-content">
+            <form class="room-form">
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" class="search-input">
+                </div>
+                <div class="search-filter">
+                    <div>
+                        <label for="">Floor</label>
+                        <select>
+                            <option value="all">All</option>
+                            <option value="all">1</option>
+                            <option value="all">2</option>
+                            <option value="all">3</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="">Status</label>
+                        <select>
+                            <option value="all">All</option>
+                            <option value="all">Available</option>
+                            <option value="all">Occupied</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="">Checkin Date</label>
+                        <input type="date">
+                    </div>
+                    <div>
+                        <label for="">Checkout Date</label>
+                        <input type="date">
+                    </div>
+                </div>
+            </form>
+            <div class="table-content">
+
+                <table class="table-room">
+                    <thead>
+                        <tr>
+                            <th>Room Number</th>
+                            <th>Floor Number</th>
+                            <th>Account</th>
+                            <th>Status</th>
+                            <th>Check In </th>
+                            <th>Check Out</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>John</td>
+                            <td>Available</td>
+                            <td>123; 223</td>
+                            <td>4924</td>
+                            <td class="room-action"><button class="action-green">Check in</button><button
+                                    class="action-red">Check out</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
         </section>
     </section>
 </body>
