@@ -31,6 +31,17 @@ let progress = setInterval(() =>
     }
 }, 30);
 
+const package = document.querySelector("#package");
+const money = document.querySelector("money");
+const bg = document.querySelector(".package");
+
+let dpackage = sessionStorage.getItem("package");
+let dprice = sessionStorage.getItem("price");
+
+package.innerHTML = dpackage;
+money.innerHTML = dprice;
+
+
 const upgrade = document.querySelector(".upgrade");
 
 upgrade.addEventListener("click", function() 

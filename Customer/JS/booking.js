@@ -10,7 +10,13 @@ button1.addEventListener('click', function(event)
     button2.className =  "upgrade"
     button3.innerHTML = "Upgrade Package";
     button3.className =  "upgrade"
-}, false);
+
+    let price = "99";
+    let package = "Classic";
+
+    sessionStorage.setItem("package", package);
+    sessionStorage.setItem("price", price);
+}, true);
 
 button2.addEventListener('click', function(event) 
 {   
@@ -20,7 +26,13 @@ button2.addEventListener('click', function(event)
     button1.className =  "upgrade"
     button3.innerHTML = "Upgrade Package";
     button3.className =  "upgrade"
-}, false);
+
+    let price = "199";
+    let package = "Junior";
+
+    sessionStorage.setItem("package", package);
+    sessionStorage.setItem("price", price);
+}, true);
 
 button3.addEventListener('click', function(event) 
 {   
@@ -30,4 +42,11 @@ button3.addEventListener('click', function(event)
     button1.className =  "upgrade"
     button2.innerHTML = "Upgrade Package";
     button2.className =  "upgrade"
-}, false);
+
+    let price = "299";
+    let package = "Senior";
+
+    sessionStorage.setItem("package", package);
+    sessionStorage.setItem("price", price);
+}, true);
+
