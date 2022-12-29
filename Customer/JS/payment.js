@@ -18,3 +18,19 @@ const year = date.getFullYear();
 payname.innerHTML = firstname + " " + lastname;
 payid.innerHTML = idvar;
 current.innerHTML = month + "/" + today + "/"  + year ;
+
+const package = document.querySelector("package");
+const money1 = document.querySelector("money1");
+const money2 = document.querySelector("money2");
+const total = document.querySelector("total");
+
+let paypackage = sessionStorage.getItem("package");
+let paytotal = sessionStorage.getItem("price");
+
+let cost = parseFloat(paytotal * 0.8);
+let tax = parseFloat(paytotal * 0.2);
+
+package.innerHTML = paypackage + " ";
+money1.innerHTML = cost.toFixed(2);
+money2.innerHTML = tax.toFixed(2);
+total.innerHTML = paytotal;
