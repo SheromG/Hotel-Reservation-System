@@ -52,35 +52,35 @@ button3.addEventListener('click', function(event)
 
 button1.onclick = function()
 {
-    localStorage.setItem("button11", "Current Package");
-    localStorage.setItem("button12", "current");
-    localStorage.setItem("button21", "Upgrade Package");
-    localStorage.setItem("button22", "upgrade");
-    localStorage.setItem("button31", "Upgrade Package");
-    localStorage.setItem("button32", "upgrade");
+    sessionStorage.setItem("button11", "Current Package");
+    sessionStorage.setItem("button12", "current");
+    sessionStorage.setItem("button21", "Upgrade Package");
+    sessionStorage.setItem("button22", "upgrade");
+    sessionStorage.setItem("button31", "Upgrade Package");
+    sessionStorage.setItem("button32", "upgrade");
 }
 button2.onclick = function()
 {
-    localStorage.setItem("button11", "Upgrade Package");
-    localStorage.setItem("button12", "upgrade");
-    localStorage.setItem("button21", "Current Package");
-    localStorage.setItem("button22", "current");
-    localStorage.setItem("button31", "Upgrade Package");
-    localStorage.setItem("button32", "upgrade");
+    sessionStorage.setItem("button11", "Upgrade Package");
+    sessionStorage.setItem("button12", "upgrade");
+    sessionStorage.setItem("button21", "Current Package");
+    sessionStorage.setItem("button22", "current");
+    sessionStorage.setItem("button31", "Upgrade Package");
+    sessionStorage.setItem("button32", "upgrade");
 }
 button3.onclick = function()
 {
-    localStorage.setItem("button11", "Upgrade Package");
-    localStorage.setItem("button12", "upgrade");
-    localStorage.setItem("button21", "Upgrade Package");
-    localStorage.setItem("button22", "upgrade");
-    localStorage.setItem("button31", "Current Package");
-    localStorage.setItem("button32", "current");
+    sessionStorage.setItem("button11", "Upgrade Package");
+    sessionStorage.setItem("button12", "upgrade");
+    sessionStorage.setItem("button21", "Upgrade Package");
+    sessionStorage.setItem("button22", "upgrade");
+    sessionStorage.setItem("button31", "Current Package");
+    sessionStorage.setItem("button32", "current");
 }
 
-button1.innerHTML = localStorage.getItem("button11");
-button1.className = localStorage.getItem("button12");
-button2.innerHTML = localStorage.getItem("button21");
-button2.className = localStorage.getItem("button22");
-button3.innerHTML = localStorage.getItem("button31");
-button3.className = localStorage.getItem("button32");
+button1.innerHTML = sessionStorage.getItem("button11");
+button1.className = sessionStorage.getItem("button12");
+button2.innerHTML = sessionStorage.getItem("button21");
+button2.className = sessionStorage.getItem("button22");
+button3.innerHTML = sessionStorage.getItem("button31");
+button3.className = sessionStorage.getItem("button32");
