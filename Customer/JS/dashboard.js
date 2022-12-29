@@ -30,3 +30,10 @@ let progress = setInterval(() =>
         clearInterval(progress);
     }
 }, 30);
+
+const upgrade = document.querySelector(".upgrade");
+
+upgrade.addEventListener("click", function() 
+{
+    location.replace("Booking.html");
+});
