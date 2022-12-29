@@ -2,8 +2,10 @@ const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
 
-button1.addEventListener('click', function(event) 
+button1.addEventListener('click', async function(event) 
 {   
+    event.preventDefault();
+    
     button1.innerHTML = "Current Package";
     button1.className =  "current"
     button2.innerHTML = "Upgrade Package";
@@ -18,8 +20,10 @@ button1.addEventListener('click', function(event)
     sessionStorage.setItem("price", price);
 }, true);
 
-button2.addEventListener('click', function(event) 
+button2.addEventListener('click', async function(event) 
 {   
+    event.preventDefault();
+
     button2.innerHTML = "Current Package";
     button2.className =  "current"
     button1.innerHTML = "Upgrade Package";
@@ -34,8 +38,10 @@ button2.addEventListener('click', function(event)
     sessionStorage.setItem("price", price);
 }, true);
 
-button3.addEventListener('click', function(event) 
+button3.addEventListener('click', async function(event) 
 {   
+    event.preventDefault();
+
     button3.innerHTML = "Current Package";
     button3.className =  "current"
     button1.innerHTML = "Upgrade Package";
