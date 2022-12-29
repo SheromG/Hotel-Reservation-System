@@ -25,14 +25,18 @@
 <body>
 
     <section class="wrapper">
-        <nav class="nav">
-            <a class="nav__link" href="">Dashboard</a>
-            <a class="nav__link" href="">Rooms</a>
-            <a class="nav__link" href="">Accounts</a>
-            <a class="nav__link" href="">Transaction</a>
-            <a class="nav__link" href="">Reservation</a>
-            <a class="nav__link" href="../index.html">logout</a>
-        </nav>
+        <div class="nav-wrapper">
+            <span class="hide burger">burger</span>
+            <nav class="nav pre-hide">
+                <a class="nav__link" href="">Dashboard</a>
+                <a class="nav__link" href="">Rooms</a>
+                <a class="nav__link" href="">Accounts</a>
+                <a class="nav__link" href="">Transaction</a>
+                <a class="nav__link" href="">Reservation</a>
+                <a class="nav__link" href="../index.html">logout</a>
+            </nav>
+        </div>
+
         <section class="content room-content">
             <form class="room-form">
                 <div class="search">
@@ -98,6 +102,14 @@
 
         </section>
     </section>
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('pre-hide');
+        })
+    </script>
 </body>
 
 </html>
