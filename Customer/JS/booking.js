@@ -2,7 +2,7 @@ const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
 
-button1.addEventListener('click', async function(event) 
+button1.addEventListener('click', function(event) 
 {   
     event.preventDefault();
     
@@ -18,9 +18,14 @@ button1.addEventListener('click', async function(event)
 
     sessionStorage.setItem("package", package);
     sessionStorage.setItem("price", price);
+    
+    setTimeout(function()
+    { 
+        location.replace("Dashboard.html");
+    }, 1000);
 }, true);
 
-button2.addEventListener('click', async function(event) 
+button2.addEventListener('click', function(event) 
 {   
     event.preventDefault();
 
@@ -36,9 +41,14 @@ button2.addEventListener('click', async function(event)
 
     sessionStorage.setItem("package", package);
     sessionStorage.setItem("price", price);
+
+    setTimeout(function()
+    { 
+        location.replace("Dashboard.html");
+    }, 1000);
 }, true);
 
-button3.addEventListener('click', async function(event) 
+button3.addEventListener('click', function(event) 
 {   
     event.preventDefault();
 
@@ -54,5 +64,10 @@ button3.addEventListener('click', async function(event)
 
     sessionStorage.setItem("package", package);
     sessionStorage.setItem("price", price);
+
+    setTimeout(function()
+    { 
+        location.replace("Dashboard.html");
+    }, 1000);
 }, true);
 
