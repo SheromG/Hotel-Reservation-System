@@ -33,7 +33,6 @@ let progress = setInterval(() =>
 
 const package = document.querySelector("#package");
 const money = document.querySelector("money");
-const bg = document.querySelector(".package");
 
 let dpackage = sessionStorage.getItem("package");
 let dprice = sessionStorage.getItem("price");
