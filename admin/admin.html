@@ -18,24 +18,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./loading.css">
+    <link rel="stylesheet" href="./dashboard.css">
+
     <script src="https://kit.fontawesome.com/f0632fdfe1.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", {
+            packages: ["corechart"]
+        });
+
+        google.charts.setOnLoadCallback(drawChart);
+
+        function test() {
+
+            const lineData = google.visualization.arrayToDataTable([
+                ['Year', 'Sales', 'Expenses'],
+                ['2004', 1000, 400],
+                ['2005', 1170, 460],
+                ['2006', 660, 1120],
+                ['2007', 1030, 540]
+            ]);
+
+            const lineOptions = {
+                title: 'Company Performance',
+                curveType: 'function',
+                legend: {
+                    position: 'bottom'
+                }
+            };
+
+            const lineChart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+            lineChart.draw(lineData, lineOptions);
+        }
+
+        function drawChart() {
+
+            const donutData = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Work', 11],
+                ['Eat', 2],
+                ['Commute', 2],
+                ['Watch TV', 2],
+                ['Sleep', 7]
+            ]);
+
+            const donutOptions = {
+                title: 'My Daily Activities',
+                pieHole: 0.4,
+            };
+
+            const donutChart = new google.visualization.PieChart(document.getElementById('donutchart'));
+            donutChart.draw(donutData, donutOptions);
+
+            test();
+        }
+    </script>
     <title>Admin</title>
 </head>
 
 <body>
 
-    <style>
-        .hidden {
-            display: none;
-        }
-    </style>
     <section class="wrapper">
         <div class="nav-wrapper">
             <span class="hide burger">burger</span>
             <nav class="nav pre-hide">
-                <a class="nav__link" href="">Dashboard</a>
-                <a class="nav__link" href="">Rooms</a>
+                <a class="nav__link nav__link_active" href="">Dashboard</a>
+                <a class="nav__link" href="./rooms.html">Rooms</a>
                 <a class="nav__link" href="">Accounts</a>
                 <a class="nav__link" href="">Transaction</a>
                 <a class="nav__link" href="">Reservation</a>
@@ -43,180 +93,32 @@
             </nav>
         </div>
 
-        <section class="content room-content">
-            <form class="room-form">
-                <div class="search">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" class="search-input">
+        <section class="content dashboard-content">
+            <div class="dashboard-data">
+                <div class="data">
+                    <span>Available Rooms</span>
+                    <span class="data-value">12</span>
                 </div>
-                <div class="search-filter">
-                    <div>
-                        <label for="">Floor</label>
-                        <select>
-                            <option value="all">All</option>
-                            <option value="all">1</option>
-                            <option value="all">2</option>
-                            <option value="all">3</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="">Status</label>
-                        <select>
-                            <option value="all">All</option>
-                            <option value="all">Available</option>
-                            <option value="all">Occupied</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="">Checkin Date</label>
-                        <input type="date">
-                    </div>
-                    <div>
-                        <label for="">Checkout Date</label>
-                        <input type="date">
-                    </div>
+                <div class="data">
+                    <span>Occupied Rooms</span>
+                    <span class="data-value">12</span>
                 </div>
-            </form>
-            <div class="table-content">
-
-                <table class="table-room">
-                    <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Room Number</th>
-                            <th>Floor Number</th>
-                            <th>Account</th>
-                            <th>Status</th>
-                            <th>Check In </th>
-                            <th>Check Out</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody class="table-body">
-                        <tr>
-                            <td>1</td>
-                            <td>123</td>
-                            <td>123</td>
-                            <td>John</td>
-                            <td>Available</td>
-                            <td>123; 223</td>
-                            <td>4924</td>
-                            <td class="room-action"><button class="action-green">Check in</button><button
-                                    class="action-red">Check out</button></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="data">
+                    <span>Checkins</span>
+                    <span class="data-value">12</span>
+                </div>
+                <div class="data">
+                    <span>Sale</span>
+                    <span class="data-value">12</span>
+                </div>
             </div>
-
+            <div class="charts">
+                <div id="donutchart" style="width: 100%; height: 400px;"></div>
+                <div id="curve_chart" style="width: 100%; height: 400px"></div>
+            </div>
         </section>
     </section>
 
-
-    <!-- loading -->
-    <section class="loading-wrapper hidden">
-        <div class="loading">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <section class="loading-msg">Please Wait</section>
-    </section>
-
-
-    <script src="./loading.js"></script>
-    <script>
-        const burger = document.querySelector('.burger');
-        const nav = document.querySelector('.nav');
-        const roomForm = document.querySelector('.room-form');
-
-        burger.addEventListener('click', () => {
-            nav.classList.toggle('pre-hide');
-        })
-
-
-        const randomNumber = (min, max) => {
-            return Math.floor(Math.random() * max) + min;
-        }
-
-        const fakeRoomDetails = () => {
-
-            //target the table body
-            let tableBody = document.querySelector('.table-body');
-
-            //clear tableBody elements
-            tableBody.innerHTML = "";
-
-            let resultCount = randomNumber(1, 8);
-
-            for (let index = 0; index < resultCount; index++) {
-
-                //create row
-                let row = document.createElement('tr');
-
-                //create table data
-                let idColumn = document.createElement('td');
-                let roomColumn = document.createElement('td');
-                let floorColumn = document.createElement('td');
-                let accountColumn = document.createElement('td');
-                let statusColumn = document.createElement('td');
-                let checkinColumn = document.createElement('td');
-                let checkoutColumn = document.createElement('td');
-                let actionColumn = document.createElement('td');
-
-                //create action buttons
-                let actionGreenBtn = document.createElement('button');
-                let actionRedBtn = document.createElement('button');
-
-                //update class for action buttons
-                actionGreenBtn.classList.add('action-green');
-                actionRedBtn.classList.add('action-red');
-
-                //update text
-                actionGreenBtn.innerHTML = "Check In";
-                actionRedBtn.innerHTML = "Check Out";
-
-                //update action column classlist
-                actionColumn.classList.add('room-action');
-
-                //appen the actions buttons in action column
-                actionColumn.appendChild(actionGreenBtn);
-                actionColumn.appendChild(actionRedBtn);
-
-                idColumn.innerHTML = randomNumber(1, 1000);
-                roomColumn.innerHTML = randomNumber(1, 2);
-                floorColumn.innerHTML = randomNumber(1, 3);
-
-                let occupied = randomNumber(0, 2);
-
-                statusColumn.innerHTML = occupied ? "Occupied" : "Available";
-                accountColumn.innerHTML = occupied ? "Hi" : "-";
-
-                let tempDate = new Date(Date.UTC(2019, 5, 11));
-                checkinColumn.innerHTML = tempDate;
-
-                //all all columns in row
-                row.append(idColumn);
-                row.append(roomColumn);
-                row.append(floorColumn);
-                row.append(accountColumn);
-                row.append(statusColumn);
-                row.append(checkinColumn);
-                row.append(checkoutColumn);
-                row.append(actionColumn);
-
-                //add the row in table body
-                tableBody.appendChild(row);
-            }
-        }
-
-
-        roomForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-
-            //event to show loading 
-            autoLoading(fakeRoomDetails);
-        })
-    </script>
 </body>
 
 </html>

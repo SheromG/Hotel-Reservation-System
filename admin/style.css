@@ -50,8 +50,13 @@ a {
 
 .nav__link:hover {
   background-color: grey;
+  color: white;
 }
 
+.nav__link_active {
+  background-color: grey;
+  color: white;
+}
 .nav__link:last-child {
   margin-top: auto;
 }
@@ -96,6 +101,11 @@ thead th {
 
 tr td {
   padding: 10px 20px;
+}
+
+.room-action > button {
+  display: block;
+  min-height: 100%;
 }
 
 table tr:nth-child(odd) td {
