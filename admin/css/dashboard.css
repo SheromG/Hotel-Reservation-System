@@ -1,0 +1,38 @@
+.charts {
+  display: flex;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+
+.dashboard-data {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 30px;
+  border-radius: 10px;
+  min-width: 200px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #2a9d8f;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: transform ease-in-out 500ms;
+}
+.data-value {
+  color: black;
+  font-size: 18px;
+}
+.data:hover {
+  box-shadow: #003566 0px 20px 30px -10px;
+  transform: scale(1.2);
+}

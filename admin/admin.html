@@ -1,3 +1,15 @@
+<!-- 
+
+    Todo: Setup Tabs
+
+    Tab
+        - Rooms
+        - Payments
+        - Accounts 
+        - Transactions
+        - Reservations
+        - Registration
+ -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,72 +17,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+
+    <script src="./js/general.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", {
+            packages: ["corechart"]
+        });
+
+        google.charts.setOnLoadCallback(drawChart);
+
+        function test() {
+
+            const lineData = google.visualization.arrayToDataTable([
+                ['Year', 'Sales', 'Expenses'],
+                ['2019', randomNumber(1000, 1000000), randomNumber(10000, 1000000)],
+                ['2020', randomNumber(1000, 1000000), randomNumber(10000, 1000000)],
+                ['2021', randomNumber(1000, 1000000), randomNumber(10000, 1000000)],
+                ['2022', randomNumber(1000, 1000000), randomNumber(10000, 1000000)],
+                ['2023', randomNumber(1000, 1000000), randomNumber(10000, 1000000)]
+            ]);
+
+            const lineOptions = {
+                title: 'Company Performance',
+                curveType: 'function',
+                legend: {
+                    position: 'bottom'
+                }
+            };
+
+            const lineChart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+            lineChart.draw(lineData, lineOptions);
+        }
+
+        function drawChart() {
+
+            const donutData = google.visualization.arrayToDataTable([
+                ['Activities', 'Count'],
+                ['Check ins', randomNumber(5, 100)],
+                ['Check out', randomNumber(5, 50)],
+                ['Refund', randomNumber(10, 20)],
+                ['Reservation', randomNumber(1, 100)],
+                ['Cancelled', randomNumber(5, 20)]
+            ]);
+
+            const donutOptions = {
+                title: 'Daily Activities',
+                pieHole: 0.4,
+            };
+
+            const donutChart = new google.visualization.PieChart(document.getElementById('donutchart'));
+            donutChart.draw(donutData, donutOptions);
+
+            test();
+        }
+    </script>
     <title>Admin</title>
 </head>
 
 <body>
 
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        .wrapper {
-            display: grid;
-            grid-template-columns: 1fr 9fr;
-            gap: 10px;
-        }
-
-        .content {
-            background-color: blue;
-            overflow: auto;
-            padding: 20px;
-            height: 100vh;
-        }
-
-        .nav {
-            padding-top: 20px;
-            background-color: orange;
-            display: flex;
-            flex-direction: column;
-            max-height: 600px;
-        }
-
-        a {
-            text-decoration: none;
-            color: black;
-        }
-
-        .nav__link {
-            background-color: yellow;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-        }
-
-        .nav__link::before {
-            content: url('../Customer/Media/Icon.jpg');
-        }
-
-        .nav__link:hover {
-            background-color: grey;
-        }
-
-        .nav__link:last-child {
-            margin-top: auto;
-        }
-    </style>
     <section class="wrapper">
-        <nav class="nav">
-            <a class="nav__link" href="">Home</a>
-            <a class="nav__link" href="">Home</a>
-            <a class="nav__link" href="../index.html">logout</a>
-        </nav>
-        <section class="content">
+        <div class="nav-wrapper">
+            <span class="hide burger">burger</span>
+            <nav class="nav pre-hide">
+                <a class="nav__link nav__link_active" href="">Dashboard</a>
+                <a class="nav__link" href="./rooms.html">Rooms</a>
+                <a class="nav__link" href="">Accounts</a>
+                <a class="nav__link" href="">Transaction</a>
+                <a class="nav__link" href="">Reservation</a>
+                <a class="nav__link" href="#" onclick="logout('.././index.html')">logout</a>
+            </nav>
+        </div>
+
+        <section class="content dashboard-content">
+            <div class="dashboard-data">
+                <div class="data">
+                    <span>Available Rooms</span>
+                    <span class="data-value">12</span>
+                </div>
+                <div class="data">
+                    <span>Occupied Rooms</span>
+                    <span class="data-value">12</span>
+                </div>
+                <div class="data">
+                    <span>Checkins</span>
+                    <span class="data-value">12</span>
+                </div>
+                <div class="data">
+                    <span>Today's Sale</span>
+                    <span class="data-value">12</span>
+                </div>
+            </div>
+            <div class="charts">
+                <div id="donutchart" style="width: 100%; height: 400px;"></div>
+                <div id="curve_chart" style="width: 100%; height: 400px"></div>
+            </div>
         </section>
     </section>
+
+    <script src="./js/dashboard.js"></script>
+    <script src="./js/logout.js"></script>
 </body>
 
 </html>
