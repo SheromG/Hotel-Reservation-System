@@ -1,6 +1,6 @@
 const timer = document.querySelector('#timer');
 
-const countDownDate = new Date("Jan 1, 2023 23:59:59").getTime();
+const countDownDate = new Date("Jan 1, 3001 23:59:59").getTime();
 const x = setInterval(function() 
 {
     const now = new Date().getTime();
