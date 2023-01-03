@@ -36,7 +36,7 @@
                         name="password2" required>
                 </div>
                 <span class="txt-center center secondary error">
-                    <span class = "error_default">Error Message</span>
+                    <span class="error_default">Error Message</span>
                 </span>
                 <div class="button">
                     <button class="btn submit center" type="submit">Signup</button>
@@ -53,7 +53,7 @@
         const errorDisplay = document.querySelector('.error');
 
         // submit event
-        form.addEventListener('submit', (event) => {
+        form.addEventListener('submit', async (event) => {
 
             //prevent form from submitting
             event.preventDefault();
@@ -65,7 +65,31 @@
                     throw new Error("Password don't match!");
                 }
 
-                location.replace("index.html")
+                let result = await fetch("https://carmine-catfish-belt.cyclic.app", {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': "application/json"
+                    },
+                    body: JSON.stringify({
+                        userId: "01",
+                        room: "01",
+                        username: username.value,
+                        password: password.value,
+                    })
+                });
+
+                const isValid = result.ok;
+
+                result = await result.json();
+
+                //throw an error in receive status code is not 200
+                if (!isValid) {
+                    throw new Error(result.message);
+                }
+
+                alert("Registration Success!");
+
+                form.reset();
             } catch (error) {
                 errorDisplay.innerHTML = error.message;
             }

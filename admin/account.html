@@ -1,0 +1,164 @@
+<!-- 
+
+    Todo: Setup Tabs
+
+    Tab
+        - Rooms
+        - Payments
+        - Accounts 
+        - Transactions
+        - Reservations
+        - Registration
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/loading.css">
+    <script src="./js/general.js"></script>
+    <script src="https://kit.fontawesome.com/f0632fdfe1.js" crossorigin="anonymous"></script>
+
+    <title>Accounts</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            padding: 10px 20px;
+            background-color: yellow;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            width: 100vw;
+            max-width: 300px;
+            border-radius: 10px;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top {
+            padding-block: 20px;
+        }
+
+        .top>img {
+            display: block;
+            margin-inline: auto;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+        }
+
+        .name {
+            text-align: center;
+        }
+
+        .accounts {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+    </style>
+
+    <section class="wrapper">
+        <div class="nav-wrapper">
+            <span class="hide burger">burger</span>
+            <nav class="nav pre-hide">
+                <a class="nav__link " href="./admin.html">Dashboard</a>
+                <a class="nav__link" href="./rooms.html">Rooms</a>
+                <a class="nav__link nav__link_active href="">Accounts</a>
+                <a class=" nav__link" href="">Transaction</a>
+                <a class="nav__link" href="">Reservation</a>
+                <a class="nav__link" href="#" onclick="logout('.././index.html')">logout</a>
+            </nav>
+        </div>
+
+        <section class="content account-content">
+            <form class="account-form">
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" class="search-input">
+                </div>
+            </form>
+            <div class="accounts">
+                <div class="box">
+                    <div class="top">
+                        <img src="../Customer/Media/Icon.jpg">
+                    </div>
+                    <div class="bottom">
+                        <h3 class="name">John Castillo</h3>
+                        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem,
+                            culpa
+                            eos. Amet sunt
+                            commodi vel ipsam neque quidem nobis, officia ex accusantium ut consequatur totam saepe!
+                            Eius
+                            provident quas corporis.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="top">
+                        <img src="../Customer/Media/Icon.jpg">
+                    </div>
+                    <div class="bottom">
+                        <h3 class="name">John Castillo</h3>
+                        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem,
+                            culpa
+                            eos. Amet sunt
+                            commodi vel ipsam neque quidem nobis, officia ex accusantium ut consequatur totam saepe!
+                            Eius
+                            provident quas corporis.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="top">
+                        <img src="../Customer/Media/Icon.jpg">
+                    </div>
+                    <div class="bottom">
+                        <h3 class="name">John Castillo</h3>
+                        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem,
+                            culpa
+                            eos. Amet sunt
+                            commodi vel ipsam neque quidem nobis, officia ex accusantium ut consequatur totam saepe!
+                            Eius
+                            provident quas corporis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- loading -->
+    <section class="loading-wrapper hidden">
+        <div class="loading">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <section class="loading-msg">Please Wait</section>
+    </section>
+
+    <script src="./js/loading.js"></script>
+    <script src="./js/logout.js"></script>
+
+    <script>
+        const accountForm = document.querySelector('.account-form');
+        const search = document.querySelector('.search-input');
+
+        const fakeAccountDetails = () => {
+            console.log('hi');
+            search.value = "";
+        }
+
+        accountForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            //event to show loading
+            autoLoading(fakeAccountDetails);
+        });
+    </script>
+</body>
+
+</html>
