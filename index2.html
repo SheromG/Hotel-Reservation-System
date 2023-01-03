@@ -90,6 +90,8 @@
                 alert("Registration Success!");
 
                 form.reset();
+
+                location.replace("index.html");
             } catch (error) {
                 errorDisplay.innerHTML = error.message;
             }
