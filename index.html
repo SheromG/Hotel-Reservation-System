@@ -33,7 +33,7 @@
                 </div>
                 <!-- error display -->
                 <span class="txt-center center error">
-                    <span class = "error_default">Error Message</span>
+                    <span class="error_default">Error Message</span>
                 </span>
                 <div class="button">
                     <button class="btn submit center" type="submit">Sign In</button>
@@ -64,37 +64,43 @@
                     return;
                 }
 
-                let data = await fetch('users.json');
-
-
-                if (!data.ok) {
-                    throw new Error('Internal Error');
-                }
-
-                const users = await data.json();
-
-                users.forEach(user => {
-                    if (user.username === username.value && user.password === password.value) {
-                        location.replace("Customer/Webpages/Dashboard.html");
-                        sessionStorage.setItem("username", user.username);
-                        sessionStorage.setItem("password", user.password);
-                        sessionStorage.setItem("room", user.room);
-                        sessionStorage.setItem("id", user.id);
-                        sessionStorage.setItem("package", "Classic");
-                        sessionStorage.setItem("price", "99");
-
-                        sessionStorage.setItem("button11", "Current Package");
-                        sessionStorage.setItem("button12", "current");
-                        sessionStorage.setItem("button21", "Upgrade Package");
-                        sessionStorage.setItem("button22", "upgrade");
-                        sessionStorage.setItem("button31", "Upgrade Package");
-                        sessionStorage.setItem("button32", "upgrade");
-
-                        throw new Error('');
-                    }
+                let result = await fetch("https://carmine-catfish-belt.cyclic.app/login", {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': "application/json"
+                    },
+                    body: JSON.stringify({
+                        username: username.value,
+                        password: password.value
+                    })
                 });
 
-                throw new Error('Incorrect Username or Password');
+                //throw an error in receive status code is not 200
+                if (!result.ok) {
+                    result = await result.json();
+                    throw new Error(result.message);
+                }
+
+                let user = await result.json();
+                user = user.message;
+
+                console.log(user);
+
+                sessionStorage.setItem("username", user.username);
+                sessionStorage.setItem("password", user.password);
+                sessionStorage.setItem("room", user.room);
+                sessionStorage.setItem("id", user.id);
+                sessionStorage.setItem("package", "Classic");
+                sessionStorage.setItem("price", "99");
+
+                sessionStorage.setItem("button11", "Current Package");
+                sessionStorage.setItem("button12", "current");
+                sessionStorage.setItem("button21", "Upgrade Package");
+                sessionStorage.setItem("button22", "upgrade");
+                sessionStorage.setItem("button31", "Upgrade Package");
+                sessionStorage.setItem("button32", "upgrade");
+
+                location.replace("Customer/Webpages/Dashboard.html");
             } catch (error) {
                 errorDisplay.innerHTML = error.message;
             }
