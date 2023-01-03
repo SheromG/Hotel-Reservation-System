@@ -65,7 +65,7 @@
                     throw new Error("Password don't match!");
                 }
 
-                let result = await fetch("https://carmine-catfish-belt.cyclic.app", {
+                let result = await fetch("http://localhost:3000", {
                     method: "POST",
                     headers: {
                         'Content-Type': "application/json"
