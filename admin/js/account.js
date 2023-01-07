@@ -3,13 +3,25 @@ const search = document.querySelector('.search-input');
 const accounts = document.querySelector('.accounts');
 
 
+
+const fakeNames = [
+    "John",
+    "Sherom",
+    "Mariel",
+    "Ico",
+    "Irish"
+]
+
 const generateAccountDetails = ()=>{
 
-    let  max = randomNumber(1,8);
+    // handle max display
+    let  max = randomNumber(1,5);
 
     for (let index = 0; index < max; index++) {
 
-        const box = document.createElement('box');
+    let fakeNameIndex = (randomNumber(1,4));
+
+    const box = document.createElement('box');
     const top = document.createElement('top');
     const bottom = document.createElement('bottom');
 
@@ -21,12 +33,13 @@ const generateAccountDetails = ()=>{
     img.setAttribute('src','../Customer/Media/Icon.jpg');
 
     const name = document.createElement('h3');
-    name.innerHTML = "test";
+    name.innerHTML = fakeNames[fakeNameIndex];
     name.classList.add('name');
 
     const description = document.createElement('div');
-    description.innerHTML = 'test';
+    description.innerHTML = "lor";
     description.classList.add('description');
+
 
     bottom.appendChild(name);
     bottom.appendChild(description);
@@ -39,6 +52,8 @@ const generateAccountDetails = ()=>{
     }
 }
 
+window.addEventListener('load',generateAccountDetails);
+
 const fakeAccountDetails = () => {
     generateAccountDetails();
     search.value = "";
@@ -50,4 +65,3 @@ accountForm.addEventListener("submit", (event) => {
     //event to show loading
     autoLoading(fakeAccountDetails);
 });
-
