@@ -1,0 +1,116 @@
+<!-- 
+
+    Todo: Setup Tabs
+
+    Tab
+        - Rooms
+        - Payments
+        - Accounts 
+        - Transactions
+        - Reservations
+        - Registration
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./css/style.css">
+     <link rel="stylesheet" href="./css/loading.css">
+     <script src="https://kit.fontawesome.com/f0632fdfe1.js" crossorigin="anonymous"></script>
+     <title>Reservation</title>
+ </head>
+ 
+ <body>
+ 
+     <section class="wrapper">
+         <div class="nav-wrapper">
+             <span class="hide burger">burger</span>
+             <nav class="nav pre-hide">
+                 <a class="nav__link" href="./admin.html">Dashboard</a>
+                 <a class="nav__link" href="./rooms.html">Rooms</a>
+                 <a class="nav__link" href="./account.html">Accounts</a>
+                 <a class="nav__link" href="./transaction.html">Transaction</a>
+                 <a class="nav__link nav__link_active" href="./reservation.html">Reservation</a>
+                 <a class="nav__link" href="#" onclick="logout('.././index.html')">logout</a>
+             </nav>
+         </div>
+ 
+         <section class="content room-content">
+             <form class="room-form">
+                 <div class="search">
+                     <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                     <input type="text" class="search-input">
+                 </div>
+                 <div class="search-filter">
+                     <div>
+                         <label for="">Floor</label>
+                         <select>
+                             <option value="all">All</option>
+                             <option value="all">1</option>
+                             <option value="all">2</option>
+                             <option value="all">3</option>
+                         </select>
+                     </div>
+                     <div>
+                         <label for="">Status</label>
+                         <select>
+                             <option value="all">All</option>
+                             <option value="all">Available</option>
+                             <option value="all">Occupied</option>
+                         </select>
+                     </div>
+                     <div>
+                         <label for="">Checkin Date</label>
+                         <input type="date">
+                     </div>
+                     <div>
+                         <label for="">Checkout Date</label>
+                         <input type="date">
+                     </div>
+                 </div>
+             </form>
+             <div class="table-content">
+ 
+                 <table class="table-room">
+                     <thead>
+                         <tr>
+                             <th>Id</th>
+                             <th>Room Number</th>
+                             <th>Floor Number</th>
+                             <th>Account</th>
+                             <th>Status</th>
+                             <th>Check In </th>
+                             <th>Check Out</th>
+                             <th>Action</th>
+                         </tr>
+                     </thead>
+                     <tbody class="table-body">
+                         <!-- Body is genereated by js -->
+                     </tbody>
+                 </table>
+             </div>
+ 
+         </section>
+     </section>
+ 
+ 
+     <!-- loading -->
+     <section class="loading-wrapper hidden">
+         <div class="loading">
+             <div></div>
+             <div></div>
+             <div></div>
+         </div>
+         <section class="loading-msg">Please Wait</section>
+     </section>
+     <script src="./js/logout.js"></script>
+     <script src="./js/general.js"></script>
+     <script src="./js/loading.js"></script>
+     <script src="./js/dateHandler.js"></script>
+     <script src="./js/room.js"></script>
+ </body>
+ 
+ </html>
